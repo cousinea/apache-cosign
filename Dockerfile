@@ -3,6 +3,7 @@ FROM centos:6
 COPY ./skel /
 
 RUN yum install -y httpd
+RUN yum install -y curl
 
 RUN yum update -y
 
