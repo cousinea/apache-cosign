@@ -15,15 +15,14 @@
                     "protocol": "tcp"
                 }
             ]
-        }
-    },
+        },
         "volumes": [
-          { 
-              "containerPath": "/usr/local/httpd/conf", 
-              "hostPath": "/mnt/nfs-test/httpd/docker-pilot.dsc/conf", 
-              "mode": "RW" 
-          }
-        ]
+              { 
+                  "containerPath": "/usr/local/httpd/conf", 
+                  "hostPath": "/mnt/nfs-test/httpd/docker-pilot.dsc/conf", 
+                  "mode": "RW" 
+              }
+            ]
     },
     "healthChecks": [
         {
