@@ -14,8 +14,7 @@
                     "hostPort": 0,
                     "protocol": "tcp"
                 }
-            ]
-        },
+            ],
         "volumes": [
               { 
                   "containerPath": "/usr/local/httpd/conf", 
