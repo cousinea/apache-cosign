@@ -22,7 +22,8 @@
                   "hostPath": "/mnt/nfs-test/httpd/docker-pilot.dsc/conf/2.2", 
                   "mode": "RO" 
               }
-    ],
+        ]
+    },
     "healthChecks": [
         {
             "protocol": "HTTP"
