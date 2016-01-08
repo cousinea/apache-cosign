@@ -13,7 +13,7 @@ RUN yum update -y
 
 RUN mkdir /rpm
 RUN cd /rpm
-RUN wget -c 'http://oriole.dsc.umich.edu/rhel7/UMWEB/*rpm'
+RUN wget -c 'http://oriole.dsc.umich.edu/rhel7/UMWEB/httpd-cosign-3.2.0-3.el6.x86_64.rpm'
 RUN cd -
 
 RUN chmod +x init.sh
