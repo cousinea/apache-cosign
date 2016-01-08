@@ -15,8 +15,7 @@
                     "protocol": "tcp"
                 }
             ]
-        }
-    },
+        },
         "volumes": [
               { 
                   "containerPath": "/usr/local/httpd/conf", 
