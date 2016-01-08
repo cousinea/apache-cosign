@@ -11,13 +11,13 @@ RUN yum update -y
 #RUN yum localinstall UMweb-1.0.0-1.el6.x86_64
 #RUN cd - 
 
-RUN mkdir /rpm
-RUN cd /rpm
-RUN wget -c 'http://oriole.dsc.umich.edu/rhel7/UMWEB/httpd-cosign-3.2.0-3.el6.x86_64.rpm' | rpm -ivh -
+#RUN mkdir /rpm
+#RUN cd /rpm
+RUN wget -c 'http://oriole.dsc.umich.edu/rhel7/UMWEB/httpd-cosign-3.2.0-3.el6.x86_64.rpm'
 #RUN ls -al /rpm
-#RUN rpm -ivh /rpm/httpd-cosign-3.2.0-3.el6.x86_64.rpm
+RUN rpm -ivh httpd-cosign-3.2.0-3.el6.x86_64.rpm
 #RUN wget -c 'ftp://oriole.dsc.umich.edu/rhel7/UMWEB/*.rpm'
-RUN cd 
+#RUN cd 
 
 RUN cp /index.html /var/www/html/.
 
