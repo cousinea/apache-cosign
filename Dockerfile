@@ -17,6 +17,8 @@ RUN wget -c 'http://oriole.dsc.umich.edu/rhel7/UMWEB/httpd-cosign-3.2.0-3.el6.x8
 #RUN wget -c 'ftp://oriole.dsc.umich.edu/rhel7/UMWEB/*.rpm'
 RUN cd 
 
+RUN cp /index.html /var/www/html/.
+
 RUN chmod +x init.sh
 
 CMD ["./init.sh"]
