@@ -16,4 +16,5 @@ ls -l /usr/local/httpd/conf/httpd.conf
 ls -l /usr/local/httpd/conf/extra/httpd-ssl.conf
 ls -l /usr/local/httpd/conf
 
-/usr/sbin/httpd -DFOREGROUND -f /usr/local/httpd/conf/httpd.conf
+#/usr/sbin/httpd -DFOREGROUND -f /usr/local/httpd/conf/httpd.conf
+/usr/sbin/httpd -DFOREGROUND
