@@ -15,25 +15,24 @@
                     "protocol": "tcp"
                 }
             ]
-        }
-    },
-    "volumes": [
+        },
+        "volumes": [
             { 
                 "containerPath": "/usr/local/httpd/conf", 
                 "hostPath": "/mnt/nfs-test/httpd/docker-pilot.dsc/conf/2.2", 
                 "mode": "RO" 
             }
-        ]
-    },
-    "healthChecks": [
-        {
-            "protocol": "HTTP"
+        ],
+        "healthChecks": [
+            {
+                "protocol": "HTTP"
+            }
+        ],
+        "backoffSeconds": 2,
+        "backoffFactor": 1.25,
+        "upgradeStrategy": {
+            "minimumHealthCapacity": 0.5,
+            "maximumOverCapacity": 0.5
         }
-    ],
-    "backoffSeconds": 2,
-    "backoffFactor": 1.25,
-    "upgradeStrategy": {
-        "minimumHealthCapacity": 0.5,
-        "maximumOverCapacity": 0.5
     }
 }
