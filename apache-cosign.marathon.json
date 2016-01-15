@@ -1,6 +1,6 @@
 {
     "id": "/apache-cosign",
-    "instances": 2,
+    "instances": 3,
     "cpus": 0.25,
     "mem": 32,
     "container": {
@@ -12,18 +12,21 @@
                 { "containerPort": 80, "hostPort": 0, "protocol": "tcp" }
             ]
         },
-        "healthChecks": [
-            { "protocol": "HTTP" }
-        ],
-        "backoffSeconds": 2,
-        "backoffFactor": 1.25,
-        "upgradeStrategy": { "minimumHealthCapacity": 0.5, "maximumOverCapacity": 0.5 },
         "volumes": [
-            { 
-                "containerPath": "/usr/local/httpd/conf", 
-                "hostPath": "/mnt/nfs-test/httpd/docker-pilot.dsc/conf/2.2", 
-                "mode": "RW" 
-            }
+           { 
+               "containerPath": "/usr/local/httpd/conf", 
+               "hostPath": "/mnt/nfs-test/httpd/docker-pilot.dsc/conf/2.2", 
+               "mode": "RW" 
+           }
         ]
+    },
+    "healthChecks": [
+         { "protocol": "HTTP" }
+    ],
+    "backoffSeconds": 2,
+    "backoffFactor": 1.25,
+    "upgradeStrategy": {
+        "minimumHealthCapacity": 0.5,
+        "maximumOverCapacity": 0.5
     }
 }
