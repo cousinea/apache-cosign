@@ -12,6 +12,7 @@ PASSVAL=`grep PASSWORD /password | cut -d= -f2`
 
 sed -i "s/PASSWORD/$PASSVAL/g" /var/www/html/index.html
 
+mkdir -p /usr/local/httpd/conf
 ls -l /usr
 ls -l /usr/local
 ls -l /usr/local/httpd
