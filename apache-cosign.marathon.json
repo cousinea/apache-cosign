@@ -1,6 +1,6 @@
 {
     "id": "/apache-cosign",
-    "instances": 3,
+    "instances": 2,
     "cpus": 0.25,
     "mem": 32,
     "container": {
@@ -9,29 +9,20 @@
             "image": "docker-pilot.dsc.umich.edu:31111/apache-cosign:latest",
             "network": "BRIDGE",
             "portMappings": [
-                {
-                    "containerPort": 80,
-                    "hostPort": 0,
-                    "protocol": "tcp"
-                }
+                { "containerPort": 80, "hostPort": 0, "protocol": "tcp" }
             ]
         },
         "healthChecks": [
-            {
-                "protocol": "HTTP"
-            }
+            { "protocol": "HTTP" }
         ],
         "backoffSeconds": 2,
         "backoffFactor": 1.25,
-        "upgradeStrategy": {
-            "minimumHealthCapacity": 0.5,
-            "maximumOverCapacity": 0.5
-        },
+        "upgradeStrategy": { "minimumHealthCapacity": 0.5, "maximumOverCapacity": 0.5 },
         "volumes": [
             { 
                 "containerPath": "/usr/local/httpd/conf", 
                 "hostPath": "/mnt/nfs-test/httpd/docker-pilot.dsc/conf/2.2", 
-                "mode": "RO" 
+                "mode": "RW" 
             }
         ]
     }
