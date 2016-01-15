@@ -16,13 +16,6 @@
                 }
             ]
         },
-        "volumes": [
-            { 
-                "containerPath": "/usr/local/httpd/conf", 
-                "hostPath": "/mnt/nfs-test/httpd/docker-pilot.dsc/conf/2.2", 
-                "mode": "RO" 
-            }
-        ],
         "healthChecks": [
             {
                 "protocol": "HTTP"
@@ -33,6 +26,13 @@
         "upgradeStrategy": {
             "minimumHealthCapacity": 0.5,
             "maximumOverCapacity": 0.5
-        }
+        },
+        "volumes": [
+            { 
+                "containerPath": "/usr/local/httpd/conf", 
+                "hostPath": "/mnt/nfs-test/httpd/docker-pilot.dsc/conf/2.2", 
+                "mode": "RO" 
+            }
+        ]
     }
 }
